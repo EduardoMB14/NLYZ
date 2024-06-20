@@ -22,9 +22,9 @@ const connection = require('./Database/db');
 const { get } = require('https');
 
 // - Motor de plantillas
-app.set('view engine', 'ejs');
+app.set('View engine', 'ejs');
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('Views', path.join(__dirname, 'Views'));
 
 // - Invocar a bcryptjs
 const bcryptjs = require('bcryptjs');
@@ -105,7 +105,7 @@ function renderAlert(req, res, page, title, message, icon, showConfirmButton, ti
 //__________________________RUTAS DE ACCESO_______________________//
 //login
 app.get('/login', (req, res)=>{
-    res.render('./Views/login.ejs');
+    res.render('login');
 });
 
 //Registrarse
