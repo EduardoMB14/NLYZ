@@ -4,6 +4,8 @@
 const express = require('express');
 const app = express ();
 
+const path = require('path'); // Agregar esta línea para requerir el módulo path
+
 //Invocamos a Multer
 const multer = require('multer');
 const fs = require('fs');
