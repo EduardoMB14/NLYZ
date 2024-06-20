@@ -22,6 +22,8 @@ const { get } = require('https');
 // - Motor de plantillas
 app.set('view engine', 'ejs');
 
+app.set('views', path.join(__dirname, 'views'));
+
 // - Invocar a bcryptjs
 const bcryptjs = require('bcryptjs');
 
