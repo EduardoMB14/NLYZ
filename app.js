@@ -22,7 +22,7 @@ const connection = require('./Database/db');
 const { get } = require('https');
 
 // - Motor de plantillas
-app.set('View engine', 'ejs');
+app.set('view engine', 'ejs');
 
 app.set('Views', path.join(__dirname, 'Views'));
 
