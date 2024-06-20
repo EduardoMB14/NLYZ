@@ -1,0 +1,334 @@
+/* Importamos las fuentes de la pagina */
+@font-face {
+    font-family: 'Barlow';
+    src: url('../Fonts/Barlow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} /* NORMAL */
+
+@font-face {
+    font-family: 'Barlow-ExtraBold';
+    src: url('../Fonts/Barlow-ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} /* MUY ANCHA */
+
+@font-face {
+    font-family: 'Barlow-Bold';
+    src: url('../Fonts/Barlow-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} /* ANCHA */
+
+/* Estilizar la sección principal del código */
+main {
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
+    background-color: transparent; /* Fondo transparente */
+    padding: 2em; /* Espaciado interno de 2em */
+}
+
+/* Selector universal para algunos estilos aplicables */
+* {
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina rellenos predeterminados */
+    font-family: 'Barlow', sans-serif; /* Aplica la fuente 'Barlow' */
+}
+
+/* Estilos para la selección de texto */
+::selection { 
+    background: #000000; /* Color negro para el fondo */
+    color: #fff; /* Color blanco para el texto seleccionado */
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+    background-color: #fcfcfc; /* Fondo blanco */
+}
+
+/* Estilos para el encabezado */
+header {
+    width: 100%; /* Ancho completo */
+    margin-top: 3.8em; /* Margen superior de 3.8em */
+    background-color: #ffffff; /* Fondo blanco */
+    display: inline-block; /* Muestra en línea */
+    text-align: center; /* Texto centrado */
+    border-top: 2px solid #2a2a2a20; /* Borde superior */
+    border-bottom: 2px solid #25252557; /* Borde inferior */
+}
+
+/* Estilos para el título principal */
+h1 {
+    text-align: center; /* Texto centrado */
+    font-size: 1.3em; /* Tamaño de fuente */
+    color: #1f1f1f; /* Color de texto */
+    padding: 15px; /* Relleno interno */
+    font-weight: 800; /* Grosor de la fuente */
+    font-family: 'Barlow'; /* Familia de la fuente */
+    letter-spacing: .25em; /* Espaciado entre letras */
+    background-color: transparent; /* Fondo transparente */
+}
+
+/* Selector de clase para la barra de navegación */
+.navbar {
+    position: fixed; /* Fija el menú en la ventana del navegador */
+    width: 100%; /* Establece el ancho del menú al 100% de la ventana */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    margin-top: -.4em; /* Margen superior negativo */
+    display: inline-block; /* Muestra en línea */
+    background-color: #ffffff; /* Fondo blanco */
+    color: #ffffff; /* Color de texto blanco */
+}
+
+/* Selector de clase para contenedor fluido */
+.container-fluid {
+    display: flex; /* Muestra en flexbox */
+    justify-content: space-around; /* Distribuye espacio alrededor de los elementos */
+}
+
+/* Selector de ID para el contador del carrito */
+#Cart_counter {
+    display: inline-block; /* Muestra en línea */
+    color: rgb(255, 255, 255); /* Color de texto blanco */
+    background-color: rgb(194, 0, 0); /* Fondo rojo */
+    border-radius: 100%; /* Bordes redondeados */
+    text-align: center; /* Texto centrado */
+    line-height: 20px; /* Altura de línea */
+    aspect-ratio: 1; /* Relación de aspecto */
+    position: absolute; /* Posición absoluta */
+    font-weight: 500; /* Grosor de la fuente */
+    font-size: .7em; /* Tamaño de fuente */
+    width: 20px; /* Ancho */
+    height: 20px; /* Altura */
+    align-items: center; /* Alineación de elementos */
+    margin-left: -.7em; /* Margen izquierdo negativo */
+}
+
+/* Selector de clase para iconos SVG */
+.SVG-icon {
+    margin-right: 0vw; /* Margen derecho */
+    display: inline-flex; /* Muestra en flexbox en línea */
+    font-size: 1.7em; /* Tamaño de fuente */
+    color: #090909; /* Color de texto */
+    height: auto; /* Altura automática */
+    font-weight: 900; /* Grosor de la fuente */
+    margin-left: 2em; /* Margen izquierdo */
+}
+
+/* Selector de ID para el elemento temporal */
+#temp {
+    color: rebeccapurple; /* Color de texto */
+    background-color: #000000; /* Fondo negro */
+    padding: 2em; /* Relleno interno */
+    position: relative; /* Posición relativa */
+    margin: auto; /* Márgenes automáticos */
+    border: 0; /* Sin borde */
+}
+
+/* Selector de clase para estilo de lista */
+.li-style {
+    display: flex; /* Muestra en flexbox */
+    font-family: 'Barlow-Bold'; /* Familia de la fuente */
+    font-weight: 900; /* Grosor de la fuente */
+    background-color: transparent; /* Fondo transparente */
+    color: #fff; /* Color de texto blanco */
+    margin-left: 40vw; /* Margen izquierdo */
+    flex-wrap: wrap; /* Permite el ajuste de los elementos */
+    flex-direction: row; /* Dirección del flexbox */
+}
+
+/* Selector de clase para el controlador */
+.controller {
+    width: 90%; /* Ancho del 90% */
+}
+
+/* Selector de clase para centrar elementos */
+.center {
+    display: flex; /* Muestra en flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Selector de clase para el divisor */
+.divider {
+    display: flex; /* Muestra en flexbox */
+    background-color: #bbbbbb5b; /* Fondo */
+    width: 100%; /* Ancho completo */
+    height: .1vh; /* Altura */
+    margin-top: .0em; /* Margen superior */
+    margin-bottom: .0em; /* Margen inferior */
+    border-radius: 50px; /* Bordes redondeados */
+}
+
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para la pista de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: rgb(199, 199, 199); /* Fondo */
+}
+
+/* Estilos para la manija de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background: #333333; /* Fondo */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para la manija de la barra de desplazamiento al pasar el mouse */
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar:hover {
+    background: #000000; /* Fondo */
+}
+
+/* Estilos para la expansión de la barra de navegación */
+.navbar-expand {
+    flex-wrap: nowrap; /* Sin ajuste de elementos */
+    justify-content: flex-start; /* Alinea a la izquierda */
+}
+
+.navbar-expand .navbar-nav {
+    flex-direction: row; /* Dirección del flexbox */
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+    position: absolute; /* Posición absoluta */
+}
+
+/* Estilos para el pie de página */
+footer {
+    display: flex; /* Muestra en flexbox */
+    flex-wrap: wrap; /* Permite el ajuste de los elementos */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Dirección del flexbox */
+    background-color: #000000; /* Fondo negro */
+    color: #fff; /* Color de texto blanco */
+    text-align: center; /* Texto centrado */
+}
+
+footer a { 
+    /*Enlaces*/
+    color: #fff; /* Color de texto blanco */
+    padding: 2em; /* Relleno interno */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    letter-spacing: .1em; /* Espaciado entre letras */
+    text-transform: capitalize; /* Capitaliza el texto */
+}
+
+footer span i {
+    font-size: 1.2rem; /* Tamaño de fuente */
+    letter-spacing: 2rem; /* Espaciado entre letras */
+    margin-top: 2em; /* Margen superior */
+    margin-bottom: 2em; /* Margen inferior */
+    margin-right: 0em; /* Margen derecho */
+    margin-left: 0em; /* Margen izquierdo */
+}
+
+footer .down {
+    display: block; /* Muestra como bloque */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background-color: #1b1b1b; /* Fondo */
+    width: 100%; /* Ancho completo */
+    padding: .5em 0em .5em 0em; /* Relleno interno */
+}
+
+footer .span {
+    display: block; /* Muestra como bloque */
+    background-color: transparent; /* Fondo transparente */
+    width: 50%; /* Ancho del 50% */
+    color: #fff; /* Color de texto blanco */
+    margin: 2em; /* Margen */
+}
+
+
+/*--------- EJEMPLO DE TABLAS ------------*/
+/*
+    table.separado {
+    border-collapse: separate;
+    border: 1px solid black;
+}
+    table {
+    border-spacing: 10px; // Espacio entre celdas //
+    caption-side: bottom; // Leyenda debajo de la tabla //
+     empty-cells: hide;  Ocultar celdas vacías
+}
+*/
+
+
+/*-- Ejemplo de INPUT focus ---*/
+/*
+input {
+    border-radius: 10px;
+    border: none; /* Elimina todos los bordes 
+    border-top: 1px solid #3333331e; /* Añade solo el borde inferior 
+    padding: 10px;
+    font-size: 12px;
+    margin: 0%;
+    width: 100%;
+    color: rgb(0, 15, 176);
+    background-color: #94949414;
+    animation: 0.3s ease;
+}
+
+input :focus{
+    background-color: aqua;
+    color: black;
+}
+/*---------------------------------*/
+
+
+/* Media queries para pantallas medianas (992px a 1290px) */
+@media (min-width: 992px) and (max-width: 1290px) {
+    .li-style {
+        flex-direction: row; /* Dirección del flexbox */
+        margin-left: 30vw; /* Margen izquierdo */
+    }
+}
+
+/* Media queries para pantallas pequeñas a medianas (768px a 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+    .container-fluid {
+        justify-content: left; /* Justifica a la izquierda */
+    }
+    .li-style {
+        flex-direction: column; /* Dirección del flexbox */
+        background-color: transparent; /* Fondo transparente */
+        margin-left: 0vw; /* Sin margen izquierdo */
+    }
+    .SVG-icon {
+        margin-right: 0; /* Sin margen derecho */
+    }
+}
+
+/* Media queries para pantallas pequeñas (menores a 767px) */
+@media screen and (max-width: 767px) {
+    .container-fluid {
+        justify-content: left; /* Justifica a la izquierda */
+    }
+    .li-style {
+        margin-left: 0vw; /* Sin margen izquierdo */
+        flex-direction: column; /* Dirección del flexbox */
+    }
+    .SVG-icon {
+        margin-right: 0; /* Sin margen derecho */
+    }
+    footer a {
+        padding: 1em .5em; /* Relleno interno */
+    }
+    footer .span {
+        width: 90%; /* Ancho del 90% */
+        margin: 0; /* Sin margen */
+    }
+}
+
+
+
+
+/*REFERENCIAS
+
+https://getbootstrap.com/
+
+----------*/
