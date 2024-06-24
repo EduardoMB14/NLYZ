@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded',function(){
             `;
                product_list.appendChild(product_x);
               product_x.getElementsByTagName("button")[0].addEventListener("click", ()=> addtocart(element))
+              //product_x.getElementsByTagName("button")[0].addEventListener("click", ()=> )
         });
     }
 

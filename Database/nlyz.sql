@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-05-2024 a las 20:57:31
+-- Tiempo de generación: 24-06-2024 a las 06:22:12
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -54,7 +54,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`Nombre`, `Correo`, `Contrasena`, `Rol`) VALUES
-('Eduardo', 'eduardomejia1432@gmail.com', '$2a$08$g9CXHKnmdXOWWlomhbXBVOdW1ypwxD/Ad7.A6xoKBpPtptboy2xGa', 'user'),
+('Eduardo', 'eduardomejia1432@gmail.com', '$2a$08$g9CXHKnmdXOWWlomhbXBVOdW1ypwxD/Ad7.A6xoKBpPtptboy2xGa', 'admin'),
+('administrador', 'gaelsalmen@gmail.com', '$2a$08$H9JHxgdc2yQSU2/Dctufq.Dlg3gfNMEUsCaROs7DG4nOLMpbXlmiW', 'admin'),
 ('Prueba', 'prueba@gmail.com', '$2a$08$I.VRGmf.sfVgv3hYq.SrcOWJB6O9nWqT2XoQdppprVV.4zfJpEtKi', 'user');
 
 -- --------------------------------------------------------
@@ -81,8 +82,7 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`Id_producto`, `Nombre`, `imagen`, `tipo`, `Marca`, `Color`, `Talla`, `Precio`, `descripcion`, `cantidad`) VALUES
-(4, 'Tenis Rapid', 'source/c1.webp', 'shoes', 'Rapid', 'Negro-verde Neon', '22-26', 320, 'Calzado deportivo como para caminatas y ejercicio', 12),
-(5, 'Zapato Blackmont ', 'source/c2.webp', 'shoes', 'BlackMont', 'Negro', '22-27', 330, 'Zapato de meter de material sintetico', 22),
+(5, 'Zapato Blackmont ', 'source/c2.webp', 'shoes', 'BlackMont', 'Negro', '22-27', 330, 'Zapato de meter de material sintetico', 10),
 (6, 'Tenis Rebook', 'source/c3.webp', 'shoes', 'Reebok', 'Negro', '22-26', 330, 'Teni de piso, comodo y reforzado', 4),
 (7, 'Tenis Adidas ', 'source/c4.webp', 'shoes', 'Adidas', 'Negro', '22-27', 320, 'Teni de deporte, comodiadd a cada paso', 6),
 (8, 'Tenis Sport', 'source/c5.webp', 'shoes', 'Sport', 'Rojo-Negro', '22-28', 310, 'Teni de suela comoda', 12),
@@ -116,7 +116,8 @@ INSERT INTO `productos` (`Id_producto`, `Nombre`, `imagen`, `tipo`, `Marca`, `Co
 (36, 'Bikini de dama', 'source/s6.webp', 'underwear', 'ROSA', 'Amarillo', 'Unitalla', 25, 'Bikin de mujer', 4),
 (37, 'Truza de niño', 'source/s7.webp', 'underwear', 'Chapas', 'Rojo', 'Ch', 30, 'Truza de niño', 2),
 (38, 'Truza de niño', 'source/s8.webp', 'underwear', 'Chapas', 'Verde pantano', 'Ch', 30, 'Truza de niño', 2),
-(39, 'Truza de niño', 'source/s9.webp', 'underwear', 'Chapas', 'Azul', 'Ch', 30, 'Truza de niño', 4);
+(39, 'Truza de niño', 'source/s9.webp', 'underwear', 'Chapas', 'Azul', 'Ch', 30, 'Truza de niño', 4),
+(42, 'Tenis Rapid', 'source/c1.webp', 'shoes', 'Rapid', 'Negro-verde Neon', '22-26', 320, 'Calzado deportivo como para caminatas y ejercicio', 8);
 
 --
 -- Índices para tablas volcadas
@@ -151,6 +152,12 @@ ALTER TABLE `productos`
 --
 ALTER TABLE `compra`
   MODIFY `Id_compra` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `productos`
+--
+ALTER TABLE `productos`
+  MODIFY `Id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- Restricciones para tablas volcadas

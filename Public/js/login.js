@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     const loginLink = document.querySelector('.login');
     const signupLink = document.querySelector('.signup');
     const formLogin = document.querySelector('.form_login');
@@ -16,3 +16,4 @@ document.addEventListener('DOMContentLoaded', function() {
         formRegister.classList.remove('hidden');
     });
 });
+*/

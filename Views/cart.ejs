@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Tienda de ropa online donde podras comprar ropa, calzado, playeras, pantalones y mucho más" />
     <meta name="keywords" content="Tienda, Tienda online, playeras, pantalones, compra ropa en linea" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noindex, nofollow" />
     <title> &nbsp; Carrito de compras</title>
     <link rel="stylesheet" href="resources/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="resources/scss/Bootstrap5.css" />
@@ -29,6 +29,11 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <div class="li-style">
+                <% if( user == "admin") { %>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/admin_page">Administrador</a>
+                </li>
+                <% } %>
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="/Calzado">Calzado</a></li>
                 <li class="nav-item"><a class="nav-link" href="/Playeras">Playeras</a></li>
@@ -36,8 +41,7 @@
                 <li class="nav-item"><a class="nav-link" href="/Ropa-interior">Ropa interior</a></li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >Cuenta</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/login">Iniciar Sesión</a></li>
-                    <li><a class="dropdown-item" href="/registrarse">Registrarse</a></li>
+                    <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
                   </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="/Sobre-nosotros">Más Información</a></li>
@@ -48,7 +52,7 @@
     </nav>
     <!-- Defininmos el encabezado del sitio -->
     <header>
-      <h1>Novedades Luz y Zapateria</h1>
+      <h1>Novedades Luz y Zapatería</h1>
       <!--Define el titulo principal de la pagina para los buscadores-->
     </header>
     <!--Inserta un salto de linea o de bloque -->
@@ -58,7 +62,7 @@
       
       <div class="NAN_elements" id="NAN_elements">
         <img src="resources/img/no-data.png" alt="No hay elementos en el carrito ">
-        <p>No hay productos en el carrito, Agrega algunos </p>
+        <p>No hay productos en el carrito. <br> Agrega algunos </p>
       </div>
 
       <section class="Product-list" id="Product-list">

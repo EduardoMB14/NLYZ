@@ -45,6 +45,11 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <div class="li-style">
+                <% if( user == "admin") { %>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/admin_page">Administrador</a>
+                </li>
+                <% } %>
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="/Calzado">Calzado</a></li>
                 <li class="nav-item"><a class="nav-link" href="/Playeras">Playeras</a></li>
@@ -52,8 +57,7 @@
                 <li class="nav-item"><a class="nav-link" href="/Ropa-interior">Ropa interior</a></li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >Cuenta</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/login">Iniciar Sesión</a></li>
-                    <li><a class="dropdown-item" href="/registrarse">Registrarse</a></li>
+                    <li><a class="dropdown-item" href="/logout">Cerrar Sesión</a></li>
                   </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="/Sobre-nosotros">Más Información</a></li>
@@ -431,5 +435,6 @@
     <!-- Agregamos el script para un mejor funcionamiento -->
     <script src="resources/js/Bootstrap5.js"></script>
     <script src="resources/js/more_info.js"></script>
+    <script src="resources/js/cart_service.js" defer></script>
   </body>
 </html>

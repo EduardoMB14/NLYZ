@@ -189,4 +189,12 @@
     font-size: .7em;
 }
 
+.NAN_elements img{
+    width: 60%;
+    margin: 0;
+}
+
+.NAN_elements p{
+    font-size: 1.2em;
+}
 }

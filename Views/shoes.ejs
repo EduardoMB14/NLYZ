@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Tienda de ropa online donde podras comprar ropa, calzado, playeras, pantalones y mucho más" />
     <meta name="keywords" content="Tienda, Tienda online, playeras, pantalones, compra ropa en linea" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Calzado</title>
     <link rel="stylesheet" href="resources/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="resources/scss/Bootstrap5.css" />
@@ -29,18 +29,22 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <div class="li-style">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Calzado">Calzado</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Playeras">Playeras</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Pantalones">Pantalones</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Ropa-interior">Ropa interior</a></li>
-                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >Cuenta</a>
+                <% if( user == "admin") { %>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/admin_page"> <i class="bi bi-person-fill"></i>  Administrador</a>
+                </li>
+                <% } %>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/"> <i class="bi bi-house-door-fill"></i>  Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Calzado"> <span class="hugeicons--running-shoes"></span> Calzado</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Playeras"> <span class="ion--shirt-sharp"></span> Playeras</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Pantalones"> <span class="fluent-emoji-high-contrast--jeans"></span> Pantalones</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Ropa-interior"> <span class="game-icons--underwear-shorts"></span> Ropa interior</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" ><i class="bi bi-person-fill-gear"></i>  Cuenta</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/login">Iniciar Sesión</a></li>
-                    <li><a class="dropdown-item" href="/registrarse">Registrarse</a></li>
+                    <li><a class="dropdown-item" href="/logout"><i class="bi bi-box-arrow-in-left"></i>  Cerrar sesión</a></li>
                   </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="/Sobre-nosotros">Más Información</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Sobre-nosotros"> <i class="bi bi-info-circle-fill"></i>  Sobre nosotros</a></li>
               </div>
             </ul>
           </div>
@@ -59,8 +63,8 @@
         <img src="resources/img/vacio.png" alt="Por el momento no hay ningun producto">
         <p>Por el momento no hay ningun producto</p>
       </div>
+      <div class="alert-n" id="alert-n"></div>
       <section class="Product-list" id="Product-list">
-        
       </section>
     </main>
 
@@ -91,6 +95,21 @@
     <script src="resources/js/shoes.js"></script>
     <script src="resources/js/cart_service.js" defer></script>
     <script src="resources/js/Bootstrap5.js"></script>
+
+    <script src="resources/js/SweetAlert2.js"></script>
+    <% if(typeof alert != "undefined") { %>
+     <script>
+         Swal.fire({
+             title: '<%= alertTitle %>',
+             text: '<%= alertMessage %>',
+             icon: '<%= alertIcon %>',
+             showConfirmButton: <%= showConfirmButton %>,
+             timer: <%= timer %>
+         }).then(() => {
+             window.location = '/<%= ruta %>'
+         })
+     </script>
+     <% } %>
 
   </body>
 </html>

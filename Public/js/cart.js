@@ -1,9 +1,12 @@
 const product_list = document.getElementById('Product-list');
+//elemento de productos
 const quantityElement = document.getElementById('total_units');
+//cantidad de elementos
 const priceElement = document.getElementById('total_price');
 const NAN_elements = document.getElementById('NAN_elements');
 const acumElement = document.getElementById('acum');
 const restartCartElement = document.getElementById("restartCart");
+//LLAMAMOS A LOS ELEMENTOS POR SU ID
 
 function generate_products(){
   product_list.innerHTML = '';
