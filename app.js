@@ -104,7 +104,7 @@ function renderAlert(req, res, page, title, message, icon, showConfirmButton, ti
 //__________________________RUTAS DE ACCESO_______________________//
 //login
 app.get('/login', (req, res)=>{
-    res.render('login');
+    res.render('/login.ejs');
 });
 
 //Registrarse
