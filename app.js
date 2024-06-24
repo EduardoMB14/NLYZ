@@ -4,6 +4,8 @@
 const express = require('express');
 const app = express ();
 
+const path = require('path'); // Agregar esta línea para requerir el módulo path
+
 //Invocamos a Multer
 const multer = require('multer');
 const fs = require('fs');
@@ -23,6 +25,8 @@ const { get } = require('https');
 
 // - Motor de plantillas
 app.set('view engine', 'ejs');
+
+app.set('Views', path.join(__dirname, 'Views'));
 
 // - Invocar a bcryptjs
 const bcryptjs = require('bcryptjs');
